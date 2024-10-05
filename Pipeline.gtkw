@@ -1,0 +1,200 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Sep 07 08:45:19 2024
+[*]
+[dumpfile] "C:\Users\HP\OneDrive\Documents\RiscV_Pipeline_Core-working\dump.vcd"
+[dumpfile_mtime] "Sat Sep 07 08:44:07 2024"
+[dumpfile_size] 25821
+[savefile] "C:\Users\HP\OneDrive\Documents\RiscV_Pipeline_Core-working\Pipeline.gtkw"
+[timestart] 0
+[size] 1280 657
+[pos] -1 -1
+*-9.071842 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[treeopen] tb.dut.
+[treeopen] tb.dut.decode.
+[treeopen] tb.dut.execute.
+[treeopen] tb.dut.fetch.
+[treeopen] tb.dut.memory.
+[sst_width] 220
+[signals_width] 232
+[sst_expanded] 1
+[sst_vpaned_height] 251
+@800200
+-Global_Input
+@28
+tb.dut.clk
+tb.dut.rst
+@1000200
+-Global_Input
+@800200
+-Fetch_Cycle
+@28
+tb.dut.PCSrcE
+@22
+tb.dut.PCTargetE[31:0]
+tb.dut.PCD[31:0]
+tb.dut.PCPlus4D[31:0]
+tb.dut.InstrD[31:0]
+@1000200
+-Fetch_Cycle
+@800200
+-Decode_Cycle
+@c00022
+tb.dut.PCE[31:0]
+@28
+(0)tb.dut.PCE[31:0]
+(1)tb.dut.PCE[31:0]
+(2)tb.dut.PCE[31:0]
+(3)tb.dut.PCE[31:0]
+(4)tb.dut.PCE[31:0]
+(5)tb.dut.PCE[31:0]
+(6)tb.dut.PCE[31:0]
+(7)tb.dut.PCE[31:0]
+(8)tb.dut.PCE[31:0]
+(9)tb.dut.PCE[31:0]
+(10)tb.dut.PCE[31:0]
+(11)tb.dut.PCE[31:0]
+(12)tb.dut.PCE[31:0]
+(13)tb.dut.PCE[31:0]
+(14)tb.dut.PCE[31:0]
+(15)tb.dut.PCE[31:0]
+(16)tb.dut.PCE[31:0]
+(17)tb.dut.PCE[31:0]
+(18)tb.dut.PCE[31:0]
+(19)tb.dut.PCE[31:0]
+(20)tb.dut.PCE[31:0]
+(21)tb.dut.PCE[31:0]
+(22)tb.dut.PCE[31:0]
+(23)tb.dut.PCE[31:0]
+(24)tb.dut.PCE[31:0]
+(25)tb.dut.PCE[31:0]
+(26)tb.dut.PCE[31:0]
+(27)tb.dut.PCE[31:0]
+(28)tb.dut.PCE[31:0]
+(29)tb.dut.PCE[31:0]
+(30)tb.dut.PCE[31:0]
+(31)tb.dut.PCE[31:0]
+@1401200
+-group_end
+@22
+tb.dut.PCPlus4E[31:0]
+tb.dut.RD_E[4:0]
+@28
+tb.dut.ALUControlE[2:0]
+tb.dut.ALUSrcE
+tb.dut.BranchE
+tb.dut.MemWriteE
+tb.dut.RegWriteE
+tb.dut.ResultSrcE
+@22
+tb.dut.RD1_E[31:0]
+tb.dut.RD2_E[31:0]
+tb.dut.Imm_Ext_E[31:0]
+@1000200
+-Decode_Cycle
+@800200
+-Execute_Cycle
+@22
+tb.dut.PCPlus4M[31:0]
+@c00022
+tb.dut.RD_M[4:0]
+@28
+(0)tb.dut.RD_M[4:0]
+(1)tb.dut.RD_M[4:0]
+(2)tb.dut.RD_M[4:0]
+(3)tb.dut.RD_M[4:0]
+(4)tb.dut.RD_M[4:0]
+@1401200
+-group_end
+@28
+tb.dut.MemWriteM
+tb.dut.RegWriteM
+tb.dut.ResultSrcM
+tb.dut.execute.ForwardAE[1:0]
+@22
+tb.dut.execute.Scr_A[31:0]
+@28
+tb.dut.execute.ForwardBE[1:0]
+@22
+tb.dut.execute.Scr_B[31:0]
+tb.dut.WriteDataM[31:0]
+tb.dut.ALU_ResultM[31:0]
+@1000200
+-Execute_Cycle
+@800200
+-Memory_Cycle
+@22
+tb.dut.PCPlus4W[31:0]
+@28
+tb.dut.ResultSrcW
+@24
+tb.dut.memory.data.A[31:0]
+@22
+tb.dut.memory.data.RD[31:0]
+@28
+tb.dut.memory.data.WE
+tb.dut.memory.MemWriteM
+@22
+tb.dut.memory.ReadDataM[31:0]
+tb.dut.ALU_ResultW[31:0]
+tb.dut.ReadDataW[31:0]
+tb.dut.memory.WriteDataM[31:0]
+@1000200
+-Memory_Cycle
+@800200
+-Register_WriteBack
+@28
+tb.dut.RegWriteW
+@24
+tb.dut.ResultW[31:0]
+@1000200
+-Register_WriteBack
+@28
+tb.dut.Forwarding_block.RegWriteM
+tb.dut.Forwarding_block.RegWriteW
+@22
+tb.dut.Forwarding_block.RD_M[4:0]
+tb.dut.Forwarding_block.RD_W[4:0]
+tb.dut.Forwarding_block.RS1_E[4:0]
+tb.dut.Forwarding_block.RS2_E[4:0]
+@28
+tb.dut.Forwarding_block.ForwardAE[1:0]
+@22
+tb.dut.Forwarding_block.RS2_E[4:0]
+@28
+tb.dut.Forwarding_block.ForwardBE[1:0]
+@800200
+-Stall_Logic
+@22
+tb.dut.decode.register.RD1[31:0]
+tb.dut.decode.register.RD2[31:0]
+tb.dut.stall.RD_E[4:0]
+tb.dut.stall.RS1_D[4:0]
+tb.dut.stall.RS2_D[4:0]
+@28
+tb.dut.stall.ResultSrcE
+tb.dut.stall.StallD
+tb.dut.stall.StallF
+tb.dut.stall.lwStall
+@1000200
+-Stall_Logic
+@800200
+-Branch Hazard
+@28
+tb.dut.execute.ZeroE
+tb.dut.branch.FlushD
+tb.dut.branch.FlushE
+tb.dut.branch.PCSrcE
+@22
+tb.dut.branch.RD_E[4:0]
+tb.dut.branch.RS1_D[4:0]
+tb.dut.branch.RS2_D[4:0]
+@28
+tb.dut.branch.ResultSrcE
+@29
+tb.dut.branch.lwStall
+@1000200
+-Branch Hazard
+[pattern_trace] 1
+[pattern_trace] 0
