@@ -124,6 +124,7 @@ addi x14, x0, 100     # x14 = 100 (end marker)
 
 Hex Code
 
+```assembly
 0x00A00093
 0x00500113
 0x10000793
