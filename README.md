@@ -40,6 +40,11 @@ The processor is designed for efficient execution of instructions and smooth han
 
 ---
 
+## Reference
+- **Digital Design and Computer Architecture: RISC-V Edition** by Sarah L. Harris and David Money Harris
+
+---
+
 ## Diagram
 
 Below is the block diagram of the RV32I Pipelined Processor with full hazard handling:
