@@ -34,6 +34,14 @@ The processor is designed for efficient execution of instructions and smooth han
 
 ---
 
+## Diagram
+
+Below is the block diagram of the RV32I Pipelined Processor with full hazard handling:
+
+![RV32I Pipelined Processor Diagram](images/RV32I_Pipelined.png)
+
+---
+
 ## Supported Instructions
 
 This processor supports all RV32I instructions categorized into the following types:  
@@ -111,3 +119,7 @@ addi x13, x0, 3       # Skipped due to jump
 
 Done:
 addi x14, x0, 100     # x14 = 100 (end marker)
+
+---
+
+## Diagram
