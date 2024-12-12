@@ -34,6 +34,13 @@ The processor is designed for efficient execution of instructions and smooth han
 
 ---
 
+## Under Supervision
+- **https://github.com/HamzaShabbir517**
+- **https://github.com/zeeshanrafique23**: For editing and running Verilog code.  
+
+
+---
+
 ## Diagram
 
 Below is the block diagram of the RV32I Pipelined Processor with full hazard handling:
