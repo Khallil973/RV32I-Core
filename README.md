@@ -35,7 +35,7 @@ The processor is designed for efficient execution of instructions and smooth han
 ---
 
 ## Under Supervision
-- [[Hamza Shabbir](https://github.com/HamzaShabbir517)
+- [Hamza Shabbir](https://github.com/HamzaShabbir517)
 - [Zeeshan Rafique](https://github.com/zeeshanrafique23)
 
 ---
