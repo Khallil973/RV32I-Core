@@ -38,7 +38,7 @@ The processor is designed for efficient execution of instructions and smooth han
 
 Below is the block diagram of the RV32I Pipelined Processor with full hazard handling:
 
-<img width="590" alt="RV32I Pipelined" src="https://github.com/user-attachments/assets/98531070-eb18-4e9e-9d1b-40735c386302" />
+<img width="791" alt="RV32I Pipelined" src="https://github.com/user-attachments/assets/f055d1e1-5ef5-43f1-9dd6-a8d3e3e1c6f7" />
 
 ---
 
