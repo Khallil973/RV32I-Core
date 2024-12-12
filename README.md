@@ -35,9 +35,8 @@ The processor is designed for efficient execution of instructions and smooth han
 ---
 
 ## Under Supervision
-- **https://github.com/HamzaShabbir517**
-- **https://github.com/zeeshanrafique23**: For editing and running Verilog code.  
-
+- [[Hamza Shabbir](https://github.com/HamzaShabbir517)
+- [Zeeshan Rafique](https://github.com/zeeshanrafique23)
 
 ---
 
