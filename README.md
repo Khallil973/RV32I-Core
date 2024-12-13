@@ -1,4 +1,4 @@
-# RV32I 5-Stage Pipelined CPU
+# RV32I 5-Stage Pipelined 
 
 ## Description
 This repository contains the implementation of an RV32I 5-Stage Pipelined Processor using Verilog. The design supports RV32I instructions (I, S, B, J, and R types) and includes hazard resolution mechanisms for data and control hazards. The pipeline consists of the following stages:  
