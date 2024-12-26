@@ -88,6 +88,15 @@ To execute a program:
 4. Load the hex file into the ROM module for simulation.  
 
 ---
+## How to Run
+To compile, run, and view the simulation, use the following commands:
+
+```bash
+iverilog -o out.vvp Pipeline_Top.v Pipeline_tb.v  # Compile the Verilog files
+vvp out.vvp                                       # Execute the compiled file
+gtkwave                                           # Open the waveform viewer
+```
+---
 
 ## Sample Program
 
