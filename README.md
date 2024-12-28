@@ -19,7 +19,6 @@ The processor is designed for efficient execution of instructions and smooth han
 - **Stalls**: Introduced when forwarding cannot resolve dependencies, especially in load-use situations.  
 
 ### 2. **Control Hazards**
-- **Branch Prediction**: Resolves branches early in the ID stage to reduce penalties.  
 - **Pipeline Flushing**: Clears incorrect instructions on branch misprediction.  
 
 ### 3. **Structural Hazards**
