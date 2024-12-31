@@ -1,4 +1,4 @@
-//`include "Mux.v"
+//`include "Source/mux.v"
 
 module write_cycle(clk,rst,ResultSrcW,PCPlus4W,ALU_ResultW,ReadDataW,ResultW);
 

@@ -1,7 +1,7 @@
-//`include "Program_Counter.v"
-//`include "PC_Adder.v"
-//`include "Mux.v"
-//`include "Instruction_Memory.v"
+//`include "Source/program_counter.v"
+//`include "Source/pc_adder.v"
+//`include "Source/mux.v"
+//`include "Source/instruction_memory.v"
 
 module fetch_cycle(clk, rst, PCSrcE, PCTargetE, InstrD, PCD, PCPlus4D,EN1,EN2,FlushD);
 

@@ -1,4 +1,4 @@
-//`include "Data_Memory.v"
+//`include "Source/data_memory.v"
 
 module memory_cycle(clk,rst,RegWriteM,MemWriteM,ResultSrcM,RD_M,PCPlus4M,ALU_ResultM,WriteDataM,RegWriteW,ResultSrcW,RD_W,PCPlus4W,ALU_ResultW,ReadDataW);
 
