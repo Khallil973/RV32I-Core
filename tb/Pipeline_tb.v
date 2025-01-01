@@ -22,7 +22,7 @@ module tb();
     end
 
     initial begin
-        $dumpfile("dump.vcd");
+        $dumpfile("pipeline_top.vcd");
         $dumpvars(0);
 
     end

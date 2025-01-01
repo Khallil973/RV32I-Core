@@ -11,7 +11,7 @@ module instruction_memory(A,rst,RD);
     assign RD = (rst == 1'b0) ? 32'h00000000 : Mem[A[31:2]]; 
 
     initial begin
-    $readmemh("memfile.hex",Mem);
+    $readmemh("source/memfile.hex",Mem);
     end
 
     /*initial begin
