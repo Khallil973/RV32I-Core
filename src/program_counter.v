@@ -14,4 +14,5 @@ module program_counter(PC_NEXT, clk, PC, rst, EN);
         end
         // If EN is low, PC retains its current value (stall)
     end
+    
 endmodule

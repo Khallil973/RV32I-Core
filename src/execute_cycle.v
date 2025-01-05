@@ -2,9 +2,7 @@
 //`include "Source/pc_adder.v"
 //`include "Source/mux.v"
 
-
 module execute_cycle(clk,rst,ZeroE,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch,ALUControlE,RD1_E,RD2_E,Imm_Ext_E,RD_E,PCE,PCSrcE,PCPlus4E,PCTargetE,RegWriteM,MemWriteM,ResultSrcM,RD_M,WriteDataM,PCPlus4M,ALU_ResultM,ResultW,ForwardAE,ForwardBE,JumpE);
-
     //Declaration Of Inputs/Outputs
     input clk,rst,RegWriteE,MemWriteE,ALUSrcE,JumpE;
     input [3:0] ALUControlE;
@@ -14,28 +12,22 @@ module execute_cycle(clk,rst,ZeroE,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch
     input [31:0] ResultW;
     input [1:0] ForwardAE,ForwardBE,ResultSrcE;
     input [5:0] Branch;
-//    input [4:0] Load;
-
     output RegWriteM,MemWriteM,ZeroE; 
     output [4:0] RD_M;
     output [31:0] PCPlus4M,ALU_ResultM,WriteDataM;
     output [31:0] PCTargetE;
     output [1:0] ResultSrcM;
     output reg PCSrcE;
-
     //Declaration Of Interim Wires
     wire [31:0] Scr_A,Scr_B,Scr_B_interim;
     wire [31:0] Result_E;   
-   // wire ZeroE;
-   wire N,C,V;
+    wire N,C,V;
  
-
     //Declaration Of Registers
     reg RegWriteE_r,MemWriteE_r;
     reg [1:0] ResultSrcE_r;
     reg [4:0] RD_E_r;
     reg [31:0] RD2_E_r,PCPlus4E_r,Result_E_r;   
-
 
     //Declaration Of Modules
     //3 BY MUX
@@ -104,7 +96,6 @@ module execute_cycle(clk,rst,ZeroE,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch
         end
     end
 
-
 // For PCSource
 always @(*) begin
     PCSrcE = 1'b0; 
@@ -135,9 +126,6 @@ always @(*) begin
         PCSrcE = 1'b1; 
     end
 end
-
-//   assign PCSrcE = (ZeroE & BranchE) | JumpE;
-
 
     assign RegWriteM = RegWriteE_r;
     assign MemWriteM = MemWriteE_r;

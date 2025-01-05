@@ -1,5 +1,4 @@
 module main_decoder(op,Zero,RegWrite,MemWrite,ResultSrc, ALUSrc, ImmSrc, ALUOp,Branch,PCSrc,Jump,func3,Load,Store);
-    
     //Input & Output Declaration
     input [6:0] op;
     input [2:0] func3;
@@ -11,8 +10,6 @@ module main_decoder(op,Zero,RegWrite,MemWrite,ResultSrc, ALUSrc, ImmSrc, ALUOp,B
     output reg [5:0] Branch;
     output reg [4:0] Load;
     output reg [2:0] Store;
-
-
     // Define parameters for each branch type based on func3 values
     parameter BEQ  = 3'b000;
     parameter BNE  = 3'b001;
@@ -20,23 +17,18 @@ module main_decoder(op,Zero,RegWrite,MemWrite,ResultSrc, ALUSrc, ImmSrc, ALUOp,B
     parameter BGE  = 3'b101;
     parameter BLTU = 3'b110;
     parameter BGEU = 3'b111;
-
-
     // Define parameters for each I-Type load instructions type based on func3 values
     parameter LB  = 3'b000;
     parameter LH  = 3'b001;
     parameter LW  = 3'b010;
     parameter LBU  = 3'b100;
     parameter LHU = 3'b101;
-
     //Define parameter for each S-type store instructions 
     parameter SB  = 3'b000;
     parameter SH  = 3'b001;
     parameter SW  = 3'b010;
-
     //Interim Wire
     wire Jump;
-  //  wire [5:0] Branch;
 
     assign RegWrite = (op == 7'b0000011 | op == 7'b0110011 | op == 7'b0010011 | op == 7'b1101111) ? 1'b1 : 1'b0;
 
@@ -46,26 +38,12 @@ module main_decoder(op,Zero,RegWrite,MemWrite,ResultSrc, ALUSrc, ImmSrc, ALUOp,B
 
     assign ALUSrc = (op == 7'b0000011 | op == 7'b0100011 | op == 7'b0010011) ? 1'b1 : 1'b0;
 
-   // assign Branch_1 = (op == 7'b1100011) & (func3 == 3'b000) ? 1'b1 : 1'b0;
-
     assign ImmSrc = (op == 7'b0100011) ? 2'b01 : (op == 7'b1100011) ? 2'b10 : (op == 7'b1101111) ? 2'b11 : 2'b00;
 
     assign ALUOp = (op == 7'b0110011 | op == 7'b0010011) ? 2'b10 : (op == 7'b1100011) ? 2'b01 : 2'b00;
 
     assign Jump = (op == 7'b1101111) || (op == 7'b1100111) ? 1'b1 : 1'b0;
-
-//    assign Branch_2 = (op == 7'b1100011) & (func3 == 3'b001) ? 1'b1 : 1'b0;
-  //  assign Branch = (op == 7'b1100011) && ((func3 == 3'b000) || (func3 == 3'b001)) ? 1'b1 : 1'b0;
-
- //   assign PCSrc = ((Zero & Branch) | Jump);
-
-/*
-   assign PCSrc = (Branch_1 & (Zero == 1) ? 1'b1 :  // BEQ (branch if equal)
-                          (Branch_2 &(Zero == 0)) ? 1'b1 : // BNE (branch if not equal)
-                            1'b0 | Jump;
-*/
     
-
 // Branch logic using case statement
   always @(*) begin
       if (op == 7'b1100011) begin  

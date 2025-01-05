@@ -24,7 +24,7 @@ module tb();
     initial begin
         $dumpfile("pipeline_top.vcd");
         $dumpvars(0);
-
+        
     end
 
 endmodule

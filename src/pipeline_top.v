@@ -17,10 +17,8 @@
 `include "src/branch_hazard.v"
 
 module pipeline_top(clk,rst);
-
     //Declaring I/O
     input clk,rst;
-
     //Declaring Interim Wires
     wire PCSrcE,RegWriteW,RegWriteE,ALUSrcE,MemWriteE,RegWriteM,MemWriteM,JumpE,ZeroE;
     wire [3:0] ALUControlE;
@@ -31,14 +29,9 @@ module pipeline_top(clk,rst);
     wire [1:0] ForwardAE,ForwardBE,ResultSrcE,ResultSrcM,ResultSrcW;
     wire [5:0] Branch;
     wire [4:0] Load;
-    
     wire [4:0] RS1_D = InstrD[19:15];
     wire [4:0] RS2_D = InstrD[24:20];
-
     wire StallF,StallD,FlushE,FlushD;
-    //Declaring Interim Registers
-
-
 
     //Modules Initiation 
     //Fetch Cycle
@@ -86,7 +79,6 @@ module pipeline_top(clk,rst);
                     .FlushE(FlushE),
                     .JumpE(JumpE),
                     .ZeroE(ZeroE)
-                 //   .FlushE1(FlushE1)  
                     
 );
 
@@ -169,7 +161,6 @@ hazard_unit  Forwarding_block(
                     
 );
 
-
 stalls_hazard stall (
                     .ResultSrcE(ResultSrcE),
                     .RS1_D(RS1_D),
@@ -180,19 +171,6 @@ stalls_hazard stall (
                     .FlushE(FlushE)
                     
 );
-/* 
-stalls_hazard stall (
-                    .ResultSrcE(ResultSrcE),
-                    .RS1_D(RS1_D),
-                    .RS2_D(RS2_D),
-                    .RD_E(RD_E),
-                    .StallF(StallF),
-                    .StallD(StallD)
-       //             .FlushD(FlushD),
-    //                .FlushE(FlushE),
-       //             .PCSrcE(PCSrcE)
-                    
-); */
 
 branch_hazard branch(
                         .ResultSrcE(ResultSrcE), // Used for load dependency
@@ -203,7 +181,5 @@ branch_hazard branch(
                         .FlushD(FlushD),
                         .FlushE(FlushE) // Flush signals for Decode and Execute stages
 ); 
-
-
 
 endmodule

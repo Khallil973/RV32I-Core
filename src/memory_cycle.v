@@ -1,27 +1,21 @@
 //`include "Source/data_memory.v"
-
 module memory_cycle(clk,rst,RegWriteM,MemWriteM,ResultSrcM,RD_M,PCPlus4M,ALU_ResultM,WriteDataM,RegWriteW,ResultSrcW,RD_W,PCPlus4W,ALU_ResultW,ReadDataW);
-
     //Declaring I/O
     input clk,rst,RegWriteM,MemWriteM;
     input [4:0] RD_M;
     input [31:0] PCPlus4M,ALU_ResultM,WriteDataM;
     input [1:0] ResultSrcM;
-
     output RegWriteW;
     output [4:0] RD_W;
     output[31:0] PCPlus4W,ALU_ResultW,ReadDataW;
     output [1:0] ResultSrcW;
-
     //Declaration Of Interim Wires
     wire [31:0] ReadDataM;
-
     //Declaration Of Interim Registers
     reg RegWriteM_r,MemWriteM_r;
     reg [4:0] RD_M_r;
     reg [31:0] PCPlus4M_r,ALU_ResultM_r,ReadDataM_r;
     reg [1:0] ResultSrcM_r;
-
 
     //Declaration Of Module Initiation
     data_memory data   (
@@ -33,7 +27,6 @@ module memory_cycle(clk,rst,RegWriteM,MemWriteM,ResultSrcM,RD_M,PCPlus4M,ALU_Res
                             .RD(ReadDataM)
 
     );
-
     //Memory Stage Registers Logic
     always @ (posedge clk or negedge rst) begin
         if (rst == 1'b0) begin

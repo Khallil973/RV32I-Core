@@ -2,7 +2,6 @@ module sign_extend(In, ImmSrc, Imm_Ext);
     input [31:0] In;          // Full 32-bit instruction
     input [1:0] ImmSrc;       //  
     output reg [31:0] Imm_Ext; // Output extended immediate
-
     // ImmSrc
     // 00 -> I-Type
     // 01 -> S-Type
@@ -16,6 +15,5 @@ module sign_extend(In, ImmSrc, Imm_Ext);
             default: Imm_Ext = 32'b0; // Default in case of unknown ImmSrc
         endcase
     end
+    
 endmodule
-
-// 3'b011: immExt = {instruction[31:12], 12'b0};                           // U-type 20-bit upper immediate

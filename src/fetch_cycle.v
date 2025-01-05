@@ -4,7 +4,6 @@
 //`include "Source/instruction_memory.v"
 
 module fetch_cycle(clk, rst, PCSrcE, PCTargetE, InstrD, PCD, PCPlus4D,EN1,EN2,FlushD);
-
     // Declare input and outputs
     input clk, rst,EN1,EN2,FlushD;
     input PCSrcE;
@@ -15,15 +14,9 @@ module fetch_cycle(clk, rst, PCSrcE, PCTargetE, InstrD, PCD, PCPlus4D,EN1,EN2,Fl
     // Declare Interim wires 
     wire [31:0] PC_F, PCF, PCPlus4F;
     wire [31:0] InstrF;
-
     // Declaration of Registers
     reg [31:0] InstrF_reg;
     reg [31:0] PCF_reg, PCPlus4F_reg;
-
-  //  wire StallF;
-   // wire EN1 = ~StallF; 
-    //wire EN2 = ~StallD;
-
 
     // Initiation of Modules
     // Declare PC MUX

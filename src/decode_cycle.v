@@ -3,13 +3,11 @@
 //`include "Source/Sign_Extend.v"
 
 module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,ResultW,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch,ALUControlE,RD1_E,RD2_E,Imm_Ext_E,RD_E,PCE,PCPlus4E,RS1_E,RS2_E,FlushE,JumpE,ZeroE,Load,Store);
-
     //Delcaring I/O
     input clk,FlushE,rst,RegWriteW,PCSrc,ZeroE;
     input [4:0] RD_W;
     input [31:0] InstrD,PCD,PCPlus4D,ResultW;
     input [4:0] RS1_D,RS2_D; 
-
     //Output
     output RegWriteE,MemWriteE,ALUSrcE,JumpE;
     output [3:0] ALUControlE;
@@ -17,15 +15,11 @@ module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,Res
     output [5:0] Branch;
     output [4:0] Load;
     output [2:0] Store;
-
-  //  output [1:0] ResultSrcE;
     output [4:0] RD_E,RS1_E,RS2_E;
     output [31:0] RD1_E,RD2_E,Imm_Ext_E;
     output [31:0] PCE,PCPlus4E;
 
-
     //Declare Interim Wires
-    //wire [4:0] Load;
     wire RegWriteD,MemWriteD,ALUSrcD,JumpD;
     wire [1:0] ImmSrcD,ResultSrcD;
     wire [3:0] ALUControlD;
@@ -33,9 +27,6 @@ module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,Res
     wire [5:0] BranchD;
     wire [4:0] LoadD;
     wire [2:0] StoreD;
-        //Extract RS1D & RS2D from InstrD
-   // assign  RS1_D = InstrD[19:15];
-   // assign  RS2_D = InstrD[24:20];
 
     //Declare Of Interim Register 
     reg RegWriteD_r,MemWriteD_r,ALUSrcD_r,JumpD_r;
@@ -89,7 +80,6 @@ module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,Res
                         .Imm_Ext(Imm_Ext_D)
                         
     );
-
     //Declaring Register Logic
     always @(posedge clk or negedge rst) begin
         if(rst == 1'b0  || FlushE) begin
@@ -131,7 +121,6 @@ module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,Res
                 StoreD_r <= StoreD;
         end
     end 
-
     //Output Assign Statements
     assign RegWriteE = RegWriteD_r;
     assign MemWriteE = MemWriteD_r;
@@ -150,6 +139,5 @@ module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,Res
     assign RS2_E = RS2_D_r;
     assign Load = LoadD;
     assign Store = StoreD;
-
 
 endmodule
