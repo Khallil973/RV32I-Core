@@ -1,5 +1,5 @@
-`include "src/main_decoder.v"
-`include "src/alu_decoder.v"
+//`include "src/main_decoder.v"
+//`include "src/alu_decoder.v"
 
 module control_unit_top(op,RegWrite,MemWrite,ResultSrc,ALUSrc,Branch,ImmSrc,func3,func7,ALUOp,ALUControl,PCSrc,Jump,Zero,Load,Store);
 

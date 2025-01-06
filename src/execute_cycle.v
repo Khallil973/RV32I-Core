@@ -1,6 +1,7 @@
+//`include "Source/mux.v"
 //`include "Source/alu.v"
 //`include "Source/pc_adder.v"
-//`include "Source/mux.v"
+
 
 module execute_cycle(clk,rst,ZeroE,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch,ALUControlE,RD1_E,RD2_E,Imm_Ext_E,RD_E,PCE,PCSrcE,PCPlus4E,PCTargetE,RegWriteM,MemWriteM,ResultSrcM,RD_M,WriteDataM,PCPlus4M,ALU_ResultM,ResultW,ForwardAE,ForwardBE,JumpE);
     //Declaration Of Inputs/Outputs

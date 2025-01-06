@@ -1,3 +1,4 @@
+//`include "Source/mux.v"
 module write_cycle(clk,rst,ResultSrcW,PCPlus4W,ALU_ResultW,ReadDataW,ResultW);
 //Declaration Of Modules I/O
 input clk,rst;
