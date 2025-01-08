@@ -1,6 +1,6 @@
-//`include "Source/Control_Unit_Top.v"
-//`include "Source/Register_Files.v"
-//`include "Source/Sign_Extend.v"
+//`include "src/control_unit_top.v"
+//`include "src/register_file.v"
+//`include "src/sign_extend.v"
 
 module decode_cycle (clk,rst,,RS1_D,RS2_D,InstrD,PCD,PCPlus4D,RegWriteW,RD_W,ResultW,RegWriteE,MemWriteE,ResultSrcE,ALUSrcE,Branch,ALUControlE,RD1_E,RD2_E,Imm_Ext_E,RD_E,PCE,PCPlus4E,RS1_E,RS2_E,FlushE,JumpE,ZeroE,Load,Store);
     //Delcaring I/O

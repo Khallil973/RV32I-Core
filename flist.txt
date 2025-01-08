@@ -7,8 +7,8 @@ src/instruction_memory.v
 src/pc_adder.v
 
 src/Control_Unit_Top.v
-src/Register_Files.v
-src/Sign_Extend.v
+src/register_file.v
+src/sign_extend.v
 
 src/alu.v
 

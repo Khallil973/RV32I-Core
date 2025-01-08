@@ -1,4 +1,4 @@
- module ALU(A,B,ALUControl,Result,Zero,N,V,C);
+ module alu(A,B,ALUControl,Result,Zero,N,V,C);
   //Declaring Inpput
       input [31:0] A,B;
       input [3:0]ALUControl; //3bit ALU control

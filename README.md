@@ -95,7 +95,7 @@ Follow the steps below to simulate the RV32I Pipelined Processor:
 ### Step 1: Compile the Verilog Code
 Use the following command to compile the Verilog files:
 ```bash
-iverilog -o out.vvp src/pipeline_top.v tb/pipeline_tb.v
+iverilog -o out.vvp -f flist.txt  tb/pipeline_tb.v
 ```
 
 ### Step 2: Run the Simulation

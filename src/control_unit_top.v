@@ -32,7 +32,7 @@ module control_unit_top(op,RegWrite,MemWrite,ResultSrc,ALUSrc,Branch,ImmSrc,func
                     .Store(Store)
     );
 
-    Alu_decoder Alu(
+    alu_decoder alu(
                     .func3(func3),
                     .func7(func7),
                     .ALUOp(ALUOp),
